@@ -48,9 +48,9 @@ db.serialize(()=>{
 //     db.run('COMMIT;');
      //   db.commit();
 });
-
+// sample query
 db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");
-
+//closing connection
 db.close((err)=>{
     if (err) {
         console.error(err.message);
