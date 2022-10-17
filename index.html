@@ -1,0 +1,44 @@
+<script>
+     //DEPENDENCIES
+const fs = require('fs');
+const sqlite3 = require('sqlite3').verbose();
+//reading the file
+const dataSql = fs.readFileSync('createDb.sql').toString();
+console.log("file read")
+//connecting database
+let db= new sqlite3.Database('',sqlite3.OPEN_CREATE, (err)=>{
+    if (err) {
+        console.log(err.message);
+    }
+    console.log("Database suceesfully connected");
+});
+//after read
+//console.log('after read')
+const dataArr=dataSql.toString().split(`;`)
+//const dataSql = fs.readFileSync('createDb.sql').toString();
+
+db.serialize(()=>{
+
+     console.log("serialising...")
+    db.run('PRAGMA foreign_keys=ON;');
+    dataArr.forEach((query)=>{
+        if (query) {
+            query+=`;`;
+            db.run(query, (err)=>{
+                if (err) {
+                    console.log(err.message);
+                }
+            });
+        }
+    });
+    db.run('COMMIT;');
+});
+
+db.close((err)=>{
+    if (err) {
+        console.error(err.message);
+    }
+    console.log('Database Connection Closed');
+});
+
+</script>

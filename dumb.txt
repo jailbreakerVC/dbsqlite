@@ -1,0 +1,13 @@
+-- ALTER TABLE `user` ADD FOREIGN KEY (`user_id`) REFERENCES `mall` (`id`);
+-- ALTER TABLE `user` 
+-- ADD CONSTRAINT FK_User_Mall_ID
+-- ADD FOREIGN KEY (`user_id`) REFERENCES `mall` (`id`);
+
+-- ALTER TABLE `user` ADD FOREIGN KEY (user_id) REFERENCES `mall` (id);
+
+
+-- ALTER TABLE `user`  (`time_in`) REFERENCES `mall` (`time_in`);
+
+-- ALTER TABLE `user` ADD FOREIGN KEY (`time_out`) REFERENCES `mall` (`time_out`);
+
+-- ALTER TABLE `user` ADD FOREIGN KEY (`location`) REFERENCES `mall` (`location`);
