@@ -49,7 +49,7 @@ db.serialize(()=>{
      //   db.commit();
 });
 // sample query
-db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");
+//db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");
 //closing connection
 db.close((err)=>{
     if (err) {

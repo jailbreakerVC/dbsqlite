@@ -16,6 +16,11 @@ CREATE TABLE `user` (
   `time_out` integer,
   `amt_deducted` integer,
   `phone_num` integer,
-  `location` char
+  `location` char,
+  CONSTRAINT fk_user
+    FOREIGN KEY (user_id)
+    REFERENCES mall(id)
 );
+
+
 
