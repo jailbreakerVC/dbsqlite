@@ -49,6 +49,8 @@ db.serialize(()=>{
      //   db.commit();
 });
 // sample query
+// Note for bhavya, use this way to query anything from the data
+//also add a test row
 //db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");
 //closing connection
 db.close((err)=>{
