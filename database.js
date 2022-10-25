@@ -31,8 +31,6 @@ db.serialize(()=>{
             query+=`;`;
             db.run(query, (err)=>{
                 if (err) {
-                    // onsole.log("in serialising")c
-                    //console.log(err.message);
                     console.error("serialize:Err",{err})
                 }
             });
