@@ -2,7 +2,7 @@
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 //reading the file
-const dataSql = fs.readFileSync('createDb.sql').toString();
+const dataSql = fs.readFileSync('schema.sql').toString();
 console.log("file read")
 //connecting database
 
