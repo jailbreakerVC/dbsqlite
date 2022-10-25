@@ -42,6 +42,8 @@ db.serialize(()=>{
 
 });
 // sample query
+db.run("insert into mall values(69,420,1100,1200,20,20,2022-10-10,1,'delhi');");
+
 // Note for bhavya, use this way to query anything from the data
 //also add a test row
 //db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");

@@ -1,5 +1,5 @@
 CREATE TABLE `mall` (
-  `id` char PRIMARY KEY,
+  `id` string PRIMARY KEY,
   `veh_num` varchar(255),
   `time_in` integer,
   `time_out` integer,
@@ -7,20 +7,20 @@ CREATE TABLE `mall` (
   `total_income` integer,
   `date` date,
   `veh_count` integer,
-  `location` char
+  `location` string
 );
 
 CREATE TABLE `user` (
-  `user_id` char,
+  `user_id` string,
   `time_in` integer,
   `time_out` integer,
   `amt_deducted` integer,
   `phone_num` integer,
   `location` char,
-  CONSTRAINT fk_user
-    FOREIGN KEY (user_id)
-    REFERENCES mall(id)
+   FOREIGN KEY(user_id) REFERENCES mall(id)
 );
+
+
 
 
 
