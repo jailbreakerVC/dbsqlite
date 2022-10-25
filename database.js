@@ -5,13 +5,7 @@ const sqlite3 = require('sqlite3').verbose();
 const dataSql = fs.readFileSync('createDb.sql').toString();
 console.log("file read")
 //connecting database
-// let db= new sqlite3.Database('testDB',sqlite3.OPEN_CREATE, (err)=>{
-//     if (err) {
-//      //    console.log(err.message);
-//         console.error("db_create:Err",{err})
-//     }
-//     console.log("Database suceesfully connected");
-// });
+
 let db= new sqlite3.Database('test5.db', (err)=>{
      if (err) {
          console.log(err.message);
@@ -20,9 +14,9 @@ let db= new sqlite3.Database('test5.db', (err)=>{
        console.log("Database suceesfully connected");
  });
 //after read
-//console.log('after read')
+
 const dataArr=dataSql.toString().split(`;`)
-//const dataSql = fs.readFileSync('createDb.sql').toString();
+
 
 db.serialize(()=>{
 
@@ -45,8 +39,7 @@ db.serialize(()=>{
         }
     });
     console.log("not serialising error")
-//     db.run('COMMIT;');
-     //   db.commit();
+
 });
 // sample query
 // Note for bhavya, use this way to query anything from the data
