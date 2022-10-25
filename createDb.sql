@@ -17,7 +17,7 @@ CREATE TABLE `user` (
   `amt_deducted` integer,
   `phone_num` integer,
   `location` char,
-   FOREIGN KEY(user_id) REFERENCES mall(id)
+  
 );
 
 

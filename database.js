@@ -43,10 +43,8 @@ db.serialize(()=>{
 });
 // sample query
 db.run("insert into mall values(69,420,1100,1200,20,20,2022-10-10,1,'delhi');");
-
+db.run("insert into user VALUES(69,1100,1200,20,123123,'delhi);");
 // Note for bhavya, use this way to query anything from the data
-//also add a test row
-//db.run("INSERT INTO mall (id,time_in) VALUES(1,1400);");
 //closing connection
 db.close((err)=>{
     if (err) {
@@ -55,4 +53,5 @@ db.close((err)=>{
     console.log('Database Connection Closed');
 });
 
+//SQLite date() function	The SQLite date() function is used to calculate the date and return it in the format 'YYYY-MM-DD'.
 
